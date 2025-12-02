@@ -1,0 +1,96 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.task-item.completed {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.check-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.check-button:hover {
+  transform: scale(1.1);
+}
+
+.check-button:active {
+  transform: scale(0.95);
+}
+
+.check-icon {
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+
+.check-icon.checked {
+  color: #10b981;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 15px;
+  color: #1f2937;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
+
+.task-text.task-completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+}
+
+.delete-button:hover {
+  background: #fee2e2;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.delete-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .task-item {
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .task-text {
+    font-size: 14px;
+  }
+}
